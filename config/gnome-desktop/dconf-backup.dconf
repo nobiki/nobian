@@ -135,12 +135,12 @@ picture-options='zoom'
 secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
-sources=[('xkb', 'jp'), ('ibus', 'mozc-jp')]
+sources=[('ibus', 'mozc-jp'), ('xkb', 'jp')]
 mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'jp')]
 xkb-options=@as []
 
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='region'
 
 [org/gnome/libgnomekbd/preview]
 width=1464
