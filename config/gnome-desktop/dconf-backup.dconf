@@ -16,7 +16,7 @@ favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'terminato
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/extensions/user-theme]
-name='Transparent shell theme 3.7'
+name='Transparent-Shell-Theme'
 
 [org/gnome/shell/extensions/dash-to-dock]
 multi-monitor=false
@@ -52,7 +52,7 @@ search-filter-time-type='last_modified'
 [org/gnome/nautilus/window-state]
 sidebar-width=187
 maximized=false
-initial-size=(1260, 596)
+initial-size=(890, 550)
 
 [org/gnome/evolution-data-server]
 network-monitor-gio-name=''
@@ -63,7 +63,7 @@ clock-show-date=true
 gtk-im-module='ibus'
 show-battery-percentage=true
 icon-theme='Papirus-Dark'
-gtk-theme='Ant-Dracula'
+gtk-theme='Arc-Dark'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
@@ -174,7 +174,7 @@ col-6-width=0
 [org/gtk/settings/file-chooser]
 sort-column='name'
 sidebar-width=189
-window-position=(13, 11)
+window-position=(23, 15)
 show-size-column=true
 show-hidden=false
 window-size=(1231, 902)
