@@ -1,6 +1,8 @@
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion --update-rc
 
+echo '[ -f ~/.fzf.bash ] && source ~/.fzf.bash' >> ~/.bash_profile
+
 cat << 'EOS' > ~/.fzf.bash
 # Setup fzf
 # ---------
