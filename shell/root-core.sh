@@ -5,6 +5,7 @@ apt install -y \
   tig \
   make \
   wget \
+  curl \
   rsync \
   tar \
   zip \
