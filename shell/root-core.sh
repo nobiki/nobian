@@ -8,5 +8,8 @@ apt install -y \
   curl \
   rsync \
   tar \
+  bzip2 \
   zip \
-  unzip
+  unzip \
+  pigz \
+  p7zip-full

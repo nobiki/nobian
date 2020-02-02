@@ -55,9 +55,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/vlc.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/wine.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/chrome.sh", privileged: false
+  config.vm.provision :shell, name:"common-utils", path:"shell/apt/common.sh", privileged: false
   config.vm.provision :shell, name:"common-utils", path:"shell/anyenv.sh", privileged: false
   config.vm.provision :shell, name:"common-utils", path:"shell/direnv.sh", privileged: false
   config.vm.provision :shell, name:"common-utils", path:"shell/yarn.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/apt/common.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/jq.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/hcat.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/highway.sh", privileged: false
@@ -65,6 +67,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, name:"common-tools", path:"shell/trans.sh", privileged: false
   config.vm.provision :shell, name:"server-utils", path:"shell/certbot.sh", privileged: false
   config.vm.provision :shell, name:"server-utils", path:"shell/nginx.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/apt/development.sh", privileged: false
   config.vm.provision :shell, name:"development-tools", path:"shell/ctags.sh", privileged: false
   config.vm.provision :shell, name:"development-tools", path:"shell/phpcs.sh", privileged: false
   config.vm.provision :shell, name:"development-tools", path:"shell/eslint.sh", privileged: false
