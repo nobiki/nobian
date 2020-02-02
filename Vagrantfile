@@ -16,21 +16,6 @@ Vagrant.configure(2) do |config|
   config.vm.box = "./debian10jp.box"
   config.vm.define "nobian"
 
-  ## Provision
-  config.vbguest.auto_update = true
-  config.vm.provision :shell, name:"core", path:"provision.sh", privileged: true
-  config.vm.provision :shell, name:"core", path:"shell/root-core.sh", privileged: true
-  config.vm.provision :shell, name:"core", path:"shell/fzf.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/root-gnome.sh", privileged: true
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/ibus-mozc.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/font.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/theme.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/icon.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/vlc.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/wine.sh", privileged: false
-  config.vm.provision :shell, name:"gnome-desktop", path:"shell/chrome.sh", privileged: false
-  config.vm.provision :shell, name:"docker-host", path:"shell/docker-ce.sh", privileged: false
-
   ## VM Spec
   config.disksize.size = '120GB'
   config.vm.provider "virtualbox" do |vb|
@@ -53,6 +38,50 @@ Vagrant.configure(2) do |config|
       "--paravirtprovider", "kvm",
     ]
   end
+
+  ## Provision
+  config.vbguest.auto_update = true
+  config.vm.provision :shell, name:"core", path:"provision.sh", privileged: true
+  config.vm.provision :shell, name:"core", path:"shell/root-core.sh", privileged: true
+  config.vm.provision :shell, name:"core", path:"shell/fzf.sh", privileged: false
+  config.vm.provision :shell, name:"docker-host", path:"shell/docker-ce.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/root-gnome.sh", privileged: true
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/ibus-mozc.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/font.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/theme.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/icon.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/vlc.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/wine.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/chrome.sh", privileged: false
+  config.vm.provision :shell, name:"common-utils", path:"shell/anyenv.sh", privileged: false
+  config.vm.provision :shell, name:"common-utils", path:"shell/direnv.sh", privileged: false
+  config.vm.provision :shell, name:"common-utils", path:"shell/yarn.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/jq.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/hcat.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/highway.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/xpanes.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/trans.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/rim.sh", privileged: false
+  config.vm.provision :shell, name:"server-utils", path:"shell/certbot.sh", privileged: false
+  config.vm.provision :shell, name:"server-utils", path:"shell/nginx.sh", privileged: false
+  config.vm.provision :shell, name:"allenv", path:"shell/goenv.sh", privileged: false
+  config.vm.provision :shell, name:"allenv", path:"shell/nodenv.sh", privileged: false
+  config.vm.provision :shell, name:"allenv", path:"shell/phpenv.sh", privileged: false
+  config.vm.provision :shell, name:"allenv", path:"shell/pyenv.sh", privileged: false
+  config.vm.provision :shell, name:"allenv", path:"shell/rbenv.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/ctags.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/phpcs.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/eslint.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/git_find_big.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/hadolint.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/js-beautify.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/sql-formatter.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/rsense.sh", privileged: false
+  config.vm.provision :shell, name:"development-tools", path:"shell/ngrok.sh", privileged: false
+  config.vm.provision :shell, name:"development-utils", path:"shell/jmeter.sh", privileged: false
+  config.vm.provision :shell, name:"development-utils", path:"shell/postman.sh", privileged: false
+  config.vm.provision :shell, name:"cloud-sdks", path:"shell/awscli.sh", privileged: false
+  config.vm.provision :shell, name:"cloud-sdks", path:"shell/gcloud.sh", privileged: false
 
   ## Port Forwading
   config.vm.network :forwarded_port, guest: 80, host: 80

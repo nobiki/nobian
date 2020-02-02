@@ -1,6 +1,6 @@
+.vagrant/
+*.box
+
 backup/
 backup.log
 
-.vagrant/
-
-*.box
