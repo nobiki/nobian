@@ -3,15 +3,17 @@
 .DEFAULT_GOAL := help
 .PHONY: help
 
-debian: ## up --no-provision
+debian: ## up --no-provision (require for all tasks)
 	vagrant up --no-provision
 	vagrant provision --provision-with core
 
 docker-host: ## provision - docker-host
 	vagrant provision --provision-with docker-host
+	vagrant reload
 
 gnome-desktop: ## provision - gnome-desktop
 	vagrant provision --provision-with gnome-desktop
+	vagrant reload
 
 common: ## provision - common-tools,common-utils
 	vagrant provision --provision-with common-tools,common-utils
