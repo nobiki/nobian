@@ -1,0 +1,6 @@
+backup/
+backup.log
+
+.vagrant/
+
+*.box
