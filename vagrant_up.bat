@@ -1,3 +1,3 @@
 cd /d %~dp0
-vagrant up
+vagrant up --no-provision
 exit
