@@ -22,9 +22,6 @@ common: ## provision - common-tools,common-utils
 web-server: ## provision - server-utils
 	vagrant provision --provision-with server-utils
 
-allenv: ## provision - **env (require: common-utils)
-	vagrant provision --provision-with allenv
-
 development: ## provision - development-tools,development-utils (require: common-utils)
 	vagrant provision --provision-with development-tools,development-utils
 
@@ -32,7 +29,6 @@ task-full: ## task - all tasks (dry-run: `make -n`)
 	make docker-host
 	make common
 	make web-server
-	make allenv
 	make development
 
 task-full-desktop: ## task - all tasks with gnome-desktop (dry-run: `make -n`)
@@ -40,7 +36,6 @@ task-full-desktop: ## task - all tasks with gnome-desktop (dry-run: `make -n`)
 	make docker-host
 	make common
 	make web-server
-	make allenv
 	make development
 	vagrant snapshot save task-full-desktop
 
