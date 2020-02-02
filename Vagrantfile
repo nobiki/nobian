@@ -11,6 +11,8 @@ module VagrantPlugins
 end
 
 Vagrant.configure(2) do |config|
+
+  ## Box
   # config.vm.box = "nobiki/debian10jp"
   # config.vm.box_version = "1.0"
   config.vm.box = "./debian10jp.box"
