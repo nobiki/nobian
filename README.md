@@ -65,7 +65,6 @@ docker-host                   provision - docker-host
 gnome-desktop                 provision - gnome-desktop
 common                        provision - common-tools,common-utils
 web-server                    provision - server-utils
-allenv                        provision - **env (require: common-utils)
 development                   provision - development-tools,development-utils (require: common-utils)
 task-full                     task - all tasks (dry-run: `make -n`)
 task-full-desktop             task - all tasks with gnome-desktop (dry-run: `make -n`)
