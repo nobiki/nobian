@@ -11,6 +11,8 @@ sudo apt install -y g++ \
   libmcrypt-dev \
   re2c \
   libzip-dev \
-  libxslt1.1 libxslt-dev
+  libxslt1.1 \
+  libxslt-dev \
+  libicu-devel
 
 anyenv install phpenv
