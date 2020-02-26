@@ -63,6 +63,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, name:"common-tools", path:"shell/jq.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/hcat.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/highway.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/bat.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/exa.sh", privileged: false
+  config.vm.provision :shell, name:"common-tools", path:"shell/ripgrep.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/xpanes.sh", privileged: false
   config.vm.provision :shell, name:"common-tools", path:"shell/trans.sh", privileged: false
   config.vm.provision :shell, name:"server-utils", path:"shell/certbot.sh", privileged: false
