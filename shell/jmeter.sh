@@ -5,4 +5,4 @@ sudo wget "http://ftp.riken.jp/net/apache/jmeter/binaries/apache-jmeter-${JMETER
 sudo tar zxvf /usr/local/src/jmeter/apache-jmeter-${JMETER_VER}.tgz -C /usr/local/lib/
 sudo chown -R 1000 /usr/local/lib/apache-jmeter-${JMETER_VER}/
 echo "PATH=${PATH}:/usr/local/lib/apache-jmeter-${JMETER_VER}/bin/" >> ~/.bash_profile
-
+echo 'export JVM_ARGS="-Duser.language=ja"' >> ~/.bash_profile
