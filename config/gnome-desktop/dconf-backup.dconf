@@ -12,7 +12,7 @@ numlock-state='on'
 [org/gnome/shell]
 app-picker-view=uint32 1
 enabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'LogOutButton@kyle.aims.ac.za', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'system-monitor@paradoxxx.zero.gmail.com', 'harddiskled@bijidroid.gmail.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'terminator.desktop', 'wine-Programs-IrfanView-IrfanView 64 4.54.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'wine-Programs-IrfanView-IrfanView 64 4.54.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/extensions/user-theme]
