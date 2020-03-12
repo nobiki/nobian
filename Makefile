@@ -9,11 +9,11 @@ debian: ## up --no-provision (require for all tasks)
 
 docker-host: ## provision - docker-host
 	vagrant provision --provision-with docker-host
-	vagrant reload
+	vagrant reload --no-provision
 
 gnome-desktop: ## provision - gnome-desktop
 	vagrant provision --provision-with gnome-desktop
-	vagrant reload
+	vagrant reload --no-provision
 	vagrant snapshot save gnome-desktop
 
 common: ## provision - common-tools,common-utils
