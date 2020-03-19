@@ -13,5 +13,6 @@ sudo apt install -y \
     inotify-tools \
     poppler-utils \
     recode \
+    timeshift \
     lsb-release
 
