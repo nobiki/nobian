@@ -1,5 +1,4 @@
-# apt install --no-install-recommends -y gdm3 task-gnome-desktop network-manager-gnome terminator gnome-shell chrome-gnome-shell gnome-tweaks \
-apt install --no-install-recommends -y gdm3 task-gnome-desktop network-manager-gnome terminator terminology gnome-shell chrome-gnome-shell gnome-tweaks \
+apt install --no-install-recommends -y gdm3 task-gnome-desktop network-manager-gnome terminator gnome-shell chrome-gnome-shell gnome-tweaks \
         gnome-shell-extension-dashtodock \
         gnome-shell-extension-autohidetopbar \
         gnome-shell-extension-system-monitor \

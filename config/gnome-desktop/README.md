@@ -8,7 +8,5 @@ curl https://raw.githubusercontent.com/nobiki/nobian/master/config/gnome-desktop
 mkdir -p ~/.config/terminator
 wget -O ~/.config/terminator/config https://raw.githubusercontent.com/nobiki/nobian/master/config/gnome-desktop/terminator.config
 
-# terminology
-rsync -avz ./terminology/ ~/.config/terminology/
 ```
 
