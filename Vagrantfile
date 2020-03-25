@@ -52,6 +52,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/font.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/theme.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/icon.sh", privileged: false
+  config.vm.provision :shell, name:"gnome-desktop", path:"shell/gnome-desktop/libinput-gestures.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/vlc.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/wine.sh", privileged: false
   config.vm.provision :shell, name:"gnome-desktop", path:"shell/chrome.sh", privileged: false
