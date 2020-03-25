@@ -8,5 +8,7 @@ curl https://raw.githubusercontent.com/nobiki/nobian/master/config/gnome-desktop
 mkdir -p ~/.config/terminator
 wget -O ~/.config/terminator/config https://raw.githubusercontent.com/nobiki/nobian/master/config/gnome-desktop/terminator.config
 
+# libinput
+cp libinput-gestures.conf ~/.config/
 ```
 
