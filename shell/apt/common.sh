@@ -14,5 +14,6 @@ sudo apt install -y \
     poppler-utils \
     recode \
     timeshift \
+    qrencode \
     lsb-release
 
