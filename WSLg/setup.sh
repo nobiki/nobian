@@ -16,6 +16,8 @@ sudo apt install -y \
     ncdu \
     ftp \
     ncftp \
+    curl \
+    wget \
     aria2 \
     openssl \
     inotify-tools \
@@ -67,3 +69,6 @@ git clone git@github.com:nobiki/vim
 cd vim/
 cp environments.example environments
 ./setup.sh
+echo 'let $BASH_ENV = "~/.vimaliases"' >> ~/.vimrc
+echo 'shopt -s expand_aliases' > ~/.vimaliases
+cat ~/.bash_profile | grep -E ^alias >> ~/.vimaliases
